@@ -186,6 +186,7 @@ function getBez([l1, l2], bez, bottom = true) {
     }
   }
 }
+console.log("Dave");
 
 export function getBezPoly([l1, l2], [bez1, bez2]) {
   const b1 = getBez([l1, l2], bez1);
