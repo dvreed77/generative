@@ -210,3 +210,18 @@ export function drawBezPoly(context, b1, b2, options_) {
   context.fillStyle = options.fill;
   context.fill();
 }
+
+export function drawLine(context, pts, options_) {
+  const options = {
+    strokeColor: "red",
+    strokeWidth: 1,
+    ...options_,
+  };
+
+  context.beginPath();
+  context.moveTo(pts[0][0], pts[0][1]);
+  context.lineTo(pts[1][0], pts[1][1]);
+  context.strokeStyle = options.strokeColor;
+  context.lineWidth = options.strokeWidth;
+  context.stroke();
+}

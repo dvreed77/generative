@@ -29,6 +29,7 @@
     "primitive-quad": "^2.0.0",
     "ramda": "^0.27.0",
     "regl": "^1.4.2",
+    "three": "^0.115.0",
     "transformation-matrix": "^2.3.0"
   }
 }
