@@ -186,7 +186,6 @@ function getBez([l1, l2], bez, bottom = true) {
     }
   }
 }
-console.log("Dave");
 
 export function getBezPoly([l1, l2], [bez1, bez2]) {
   const b1 = getBez([l1, l2], bez1);
@@ -224,4 +223,22 @@ export function drawLine(context, pts, options_) {
   context.strokeStyle = options.strokeColor;
   context.lineWidth = options.strokeWidth;
   context.stroke();
+}
+
+export function drawPolygon(context, pts, options_ = {}) {
+  const options = {
+    fillColor: "red",
+    ...options_,
+  };
+  context.beginPath();
+  context.moveTo(pts[0][0], pts[0][1]);
+  for (let i = 1; i < pts.length; i++) {
+    context.lineTo(pts[i][0], pts[i][1]);
+  }
+  context.closePath();
+  context.strokeStyle = "black";
+  context.lineWidth = 10;
+  context.stroke();
+  context.fillStyle = "red";
+  context.fill();
 }
