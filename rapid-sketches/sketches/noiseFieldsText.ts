@@ -24,6 +24,7 @@ const nRows = Math.ceil(CANVAS_HEIGHT / SPACING);
 
 const settings: ISettings = {
   dimensions: [PAPER_WIDTH, PAPER_HEIGHT],
+  name: "noiseFieldsText",
 };
 
 function genGrid() {

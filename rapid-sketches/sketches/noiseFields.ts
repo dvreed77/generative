@@ -29,6 +29,7 @@ const settings: ISettings = {
   dimensions: [PAPER_WIDTH, PAPER_HEIGHT],
   pixelsPerInch: 300,
   units: "in",
+  name: "noiseFields",
 };
 
 function genGrid() {

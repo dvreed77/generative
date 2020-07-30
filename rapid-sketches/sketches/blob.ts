@@ -2,6 +2,7 @@ import { canvasSketch, ISettings } from "rapid-sketch";
 
 const settings: ISettings = {
   dimensions: [800, 800],
+  name: "blob",
 };
 
 canvasSketch(() => {

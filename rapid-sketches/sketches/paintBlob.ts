@@ -80,6 +80,7 @@ class Blob {
 }
 const settings: ISettings = {
   dimensions: [1480, 850],
+  name: "paintBlob",
 };
 
 canvasSketch(() => {

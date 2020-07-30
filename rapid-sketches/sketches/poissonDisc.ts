@@ -102,6 +102,7 @@ function distance2(a, b) {
 
 const settings: ISettings = {
   dimensions: [width, height],
+  name: "poissonDisc",
 };
 
 canvasSketch(() => {

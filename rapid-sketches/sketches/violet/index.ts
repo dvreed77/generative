@@ -6,7 +6,7 @@ import math from "canvas-sketch-util/math";
 import { pointInPolygon } from "../../utils/pointInPolygon";
 import { pointLineSegmentDistance } from "../../utils/pointLineSegmentDistance";
 import { schemeCategory10 } from "d3";
-import { pathsToSVG } from "../../utils/svg/toSVG2";
+import { pathsToSVG } from "../../utils/svg/writeSVG";
 
 interface Circle {
   x: number;
@@ -141,6 +141,7 @@ function newCircle(boundingBox, paths, circles: Circle[], minRadius: number) {
 
 const settings: ISettings = {
   dimensions: [800, 800],
+  name: "violet",
 };
 
 function genTwirl(
@@ -194,7 +195,7 @@ canvasSketch(() => {
   return ({ context, width, height }) => {
     const violetPath = loadSVG();
     for (let path of violetPath) {
-      drawPath(context, path);
+      drawPath(context, path, { fillColor: null });
     }
 
     const circles = [];
@@ -241,7 +242,11 @@ canvasSketch(() => {
       const strokeColor = schemeCategory10[i];
       paths.forEach((path) => {
         if (path.length) {
-          drawPath(context, path, { lineWidth: 1, strokeColor });
+          drawPath(context, path, {
+            lineWidth: 1,
+            strokeColor,
+            fillColor: null,
+          });
         }
       });
 

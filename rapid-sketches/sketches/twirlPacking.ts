@@ -1,28 +1,20 @@
 import { canvasSketch, ISettings } from "rapid-sketch";
 import { drawPath } from "../utils/drawPath";
-import { Point } from "../api";
 import random from "canvas-sketch-util/random";
 import math from "canvas-sketch-util/math";
-
 import SimplexNoise from "simplex-noise";
 
 const simplex = new SimplexNoise(Math.random);
 
 const settings: ISettings = {
   dimensions: [800, 800],
+  name: "twirlPacking",
 };
 
 interface Circle {
   x: number;
   y: number;
   r: number;
-}
-
-function drawCircle(context, circle: Circle) {
-  context.beginPath();
-  context.moveTo(circle.x + circle.r, circle.y);
-  context.arc(circle.x, circle.y, circle.r, 0, 2 * Math.PI);
-  context.stroke();
 }
 
 function edges([x0, x1, y0, y1], { x, y, r }: Circle) {
@@ -158,7 +150,11 @@ canvasSketch(() => {
         random.range(0, 2 * Math.PI),
         random.pick(["cw", "ccw"])
       );
-      drawPath(context, path, { lineWidth: 2, strokeColor: "blue" });
+      drawPath(context, path, {
+        lineWidth: 2,
+        strokeColor: "blue",
+        fillColor: null,
+      });
     }
 
     // drawCircle(context, c2);

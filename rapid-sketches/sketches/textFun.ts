@@ -3,6 +3,7 @@ import random from "canvas-sketch-util/random";
 import { text } from "./text";
 const settings: ISettings = {
   dimensions: [800, 800],
+  name: "textFun",
 };
 
 function printAtWordWrap(context, text, x, y, lineHeight, fitWidth) {
