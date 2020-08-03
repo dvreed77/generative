@@ -16,6 +16,8 @@
     "d3": "^5.16.0",
     "d3-quadtree": "^1.0.7",
     "d3-random": "^2.1.0",
+    "mathjs": "^7.1.0",
+    "rapid-sketch": "^1.0.0",
     "transformation-matrix": "^2.4.0"
   },
   "devDependencies": {

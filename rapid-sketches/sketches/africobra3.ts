@@ -1,13 +1,12 @@
-const canvasSketch = require("canvas-sketch");
-const random = require("canvas-sketch-util/random");
-const SimplexNoise = require("simplex-noise");
-const math = require("mathjs");
+import { canvasSketch, ISettings } from "rapid-sketch";
+import random from "canvas-sketch-util/random";
+import SimplexNoise from "simplex-noise";
 
-import { offsetPolygon } from "./utils/inflatePolygon";
+import { offsetPolygon } from "rapid-sketch-util";
 
-const settings = {
-  id: 1,
+const settings: ISettings = {
   dimensions: [2000, 2000],
+  name: "africobra3",
 };
 
 function drawPoly(context, pts, options_) {
@@ -132,10 +131,10 @@ const sketch = () => {
     const centerPadding = 200;
     context.translate(width / 2, height / 2);
 
-    genBlob(context, 400);
-    genBlob(context, 500);
-    genBlob(context, 700);
-    genBlob(context, 900);
+    genBlob(400);
+    genBlob(500);
+    genBlob(700);
+    genBlob(900);
     // const wedge = genWedge(Math.PI / 2, Math.PI * 0.7, 200, 400);
 
     // drawWedge(context, wedge);
