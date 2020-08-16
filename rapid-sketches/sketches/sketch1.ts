@@ -10,8 +10,10 @@ canvasSketch(() => {
     context.fillStyle = "white";
     context.fillRect(0, 0, width, height);
     context.beginPath();
-    context.moveTo(20, 20);
+    context.moveTo(Math.random() * width, Math.random() * height);
     context.lineTo(100, 100);
+
+    context.lineWidth = 2;
     context.stroke();
   };
 }, settings);
