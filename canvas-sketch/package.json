@@ -33,7 +33,7 @@
     "regl": "^1.4.2",
     "seed-random": "^2.2.0",
     "simplex-noise": "^2.4.0",
-    "three": "^0.115.0",
+    "three": "^0.137.0",
     "transformation-matrix": "^2.3.0"
   }
 }
